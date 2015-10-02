@@ -1,0 +1,31 @@
+<h1><i>Welcome to cat care reminders inc.</i></h1>
+<br>
+<p><h2>Here are all of our wonderful users</h2>
+<% for u in @users.all%>
+<%= u.username %>
+<%= u.age %>
+<br>
+<% end %>
+</p>
+
+
+<p><h2>Here are all of their wonderful cats</h2>
+<% for u in @cats.all%>
+<%= u.name %>
+<br>
+<% end %>
+</p>
+
+<p><h2>Here are all of their wonderful cat-related chores</h2>
+<% for u in @todos.all%>
+Task:
+<%= u.tasks %>
+which is
+<% if u.finished %>
+<%= "completed!" %>
+<% else %>
+<%= "incomplete :("%>
+<%end%>
+<br>
+<% end %>
+</p>
